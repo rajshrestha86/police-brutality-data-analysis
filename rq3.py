@@ -67,6 +67,7 @@ result = result.reset_index(drop=True)
 result
 # %%
 sns.scatterplot(x=result.counts, y=result.police)
+plt.title("Protests vs Police Expenditures")
 plt.show()
 
 # %%
