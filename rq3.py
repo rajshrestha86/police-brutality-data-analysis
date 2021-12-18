@@ -40,7 +40,7 @@ df
 
 budgets = pd.read_csv('part two dataset/police_info/budgets.csv')
 
-budgets.columns
+print(budgets.columns)
 
 pd.to_numeric(budgets['year'])
 
@@ -68,6 +68,8 @@ result
 # %%
 sns.scatterplot(x=result.counts, y=result.police)
 plt.show()
+from scipy.stats import pearsonr
+print("Pearsonr:", pearsonr(result.counts, result.police))
 
 # %%
 correlation = result.corr()
