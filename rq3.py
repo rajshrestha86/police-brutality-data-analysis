@@ -66,7 +66,8 @@ result = result.reset_index(drop=True)
 
 result
 # %%
-sns.scatterplot(x=result.counts, y=result.police)
+sns.lmplot(data=result, x="counts", y="police")
+plt.title("Protests vs Police Expenditures")
 plt.show()
 
 # %%
@@ -75,4 +76,6 @@ print(correlation)
 
 # %%
 sns.heatmap(correlation)
+plt.title("Correlation Results")
 plt.show()
+# %%
